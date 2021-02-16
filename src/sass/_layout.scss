@@ -1,7 +1,9 @@
+@use "theme";
+
 body {
   //background-color: mm-color("background");
-  color: $mm-color-body;
-  font-family: $mm-font-family;
+  color: theme.$mm-color-body;
+  font-family: theme.$mm-font-family;
 }
 
 .page {

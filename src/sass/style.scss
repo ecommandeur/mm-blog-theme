@@ -1,4 +1,7 @@
-@import "reset";
-@import "theme";
-@import "layout";
-@import "typography";
+//use partials
+//see https://css-tricks.com/introducing-sass-modules, @import will be deprecated, and then removed
+//should we still have one overarching style.scss?
+@use "reset";
+@use "theme";
+@use "layout";
+@use "typography";

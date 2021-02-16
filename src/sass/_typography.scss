@@ -1,9 +1,11 @@
+@use "theme";
+
 $mm-typography-variants: h1, h2, h3, h4;
 
 @each $type in $mm-typography-variants {
   #{$type},
   .mm-#{$type} {
-    font-weight: $mm-strong-font-weight;
+    font-weight: theme.$mm-strong-font-weight;
     line-height: 1.15;
     margin-bottom: 0.65em;
   }
@@ -14,30 +16,30 @@ $mm-typography-variants: h1, h2, h3, h4;
 // render as CSS min/max
 h1,
 .mm-h1 {
-  font-size: $mm-h1-font-size;
-  font-size: unquote("min(max(3rem, 5vw), #{$mm-h1-font-size})");
+  font-size: theme.$mm-h1-font-size;
+  font-size: unquote("min(max(3rem, 5vw), #{theme.$mm-h1-font-size})");
 }
 
 h2,
 .mm-h2 {
-  font-size: $mm-h2-font-size;
-  font-size: unquote("min(max(2.5rem, 5vw), #{$mm-h2-font-size})");
+  font-size: theme.$mm-h2-font-size;
+  font-size: unquote("min(max(2.5rem, 5vw), #{theme.$mm-h2-font-size})");
 }
 
 h3,
 .mm-h3 {
-  font-size: $mm-h3-font-size;
+  font-size: theme.$mm-h3-font-size;
 }
 
 h4,
 .mm-h4 {
-  font-size: $mm-h4-font-size;
+  font-size: theme.$mm-h4-font-size;
   color: mm-color("gray");
 }
 
 p,
 li {
-  font-size: $mm-text-font-size;
+  font-size: theme.$mm-text-font-size;
 }
 
 p {
@@ -64,11 +66,11 @@ article {
 }
 
 strong {
-  font-weight: $mm-strong-font-weight;
+  font-weight: theme.$mm-strong-font-weight;
 }
 
 a:not(.mm-button) {
-  color: $mm-link-color;
+  color: theme.$mm-link-color;
 }
 
 pre,
@@ -80,10 +82,10 @@ code {
 code {
   display: inline-flex;
   padding: 0.15em;
-  background-color: mm-color("light");
+  background-color: theme.mm-color("light");
   font-size: 0.75em;
-  color: mm-color("gray");
-  border: 1px solid scale-color(mm-color("gray"), $lightness: 50%);
+  color: theme.mm-color("gray");
+  border: 1px solid scale-color(theme.mm-color("gray"), $lightness: 50%);
   border-radius: 2px;
   line-height: 1.1;
 }
@@ -111,7 +113,7 @@ blockquote {
 
   &,
   p {
-    font-size: $mm-h4-font-size;
+    font-size: theme.$mm-h4-font-size;
   }
 
   + * {
@@ -120,7 +122,7 @@ blockquote {
 }
 
 .mm-lead {
-  font-size: $mm-lead-font-size;
+  font-size: theme.$mm-lead-font-size;
   letter-spacing: 0.01em;
   margin-bottom: 1em;
   line-height: 1.3;
