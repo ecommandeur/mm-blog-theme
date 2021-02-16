@@ -1,14 +1,15 @@
 @use "theme";
-
-$mm-typography-variants: h1, h2, h3, h4;
-
+$mm-typography-variants: h1,
+h2,
+h3,
+h4;
 @each $type in $mm-typography-variants {
-  #{$type},
-  .mm-#{$type} {
-    font-weight: theme.$mm-strong-font-weight;
-    line-height: 1.15;
-    margin-bottom: 0.65em;
-  }
+    #{$type},
+    .mm-#{$type} {
+        font-weight: theme.$mm-strong-font-weight;
+        line-height: 1.15;
+        margin-bottom: 0.65em;
+    }
 }
 
 // As of v0.3.0, `clamp` not well enough supported on mobile browsers for use
@@ -16,119 +17,115 @@ $mm-typography-variants: h1, h2, h3, h4;
 // render as CSS min/max
 h1,
 .mm-h1 {
-  font-size: theme.$mm-h1-font-size;
-  font-size: unquote("min(max(3rem, 5vw), #{theme.$mm-h1-font-size})");
+    font-size: theme.$mm-h1-font-size;
+    font-size: unquote("min(max(3rem, 5vw), #{theme.$mm-h1-font-size})");
 }
 
 h2,
 .mm-h2 {
-  font-size: theme.$mm-h2-font-size;
-  font-size: unquote("min(max(2.5rem, 5vw), #{theme.$mm-h2-font-size})");
+    font-size: theme.$mm-h2-font-size;
+    font-size: unquote("min(max(2.5rem, 5vw), #{theme.$mm-h2-font-size})");
 }
 
 h3,
 .mm-h3 {
-  font-size: theme.$mm-h3-font-size;
+    font-size: theme.$mm-h3-font-size;
 }
 
 h4,
 .mm-h4 {
-  font-size: theme.$mm-h4-font-size;
-  color: mm-color("gray");
+    font-size: theme.$mm-h4-font-size;
+    color: mm-color("gray");
 }
 
 p,
 li {
-  font-size: theme.$mm-text-font-size;
+    font-size: theme.$mm-text-font-size;
 }
 
 p {
-  margin: 0 0 1rem;
+    margin: 0 0 1rem;
 }
 
 article {
-  > ul,
-  > ol {
-    > li + li {
-      margin-top: 1rem;
+    >ul,
+    >ol {
+        >li+li {
+            margin-top: 1rem;
+        }
     }
-  }
-
-  * {
-    + h2 {
-      margin-top: 4rem;
+    * {
+        +h2 {
+            margin-top: 4rem;
+        }
+        +h3 {
+            margin-top: 2rem;
+        }
     }
-
-    + h3 {
-      margin-top: 2rem;
-    }
-  }
 }
 
 strong {
-  font-weight: theme.$mm-strong-font-weight;
+    font-weight: theme.$mm-strong-font-weight;
 }
 
-a:not(.mm-button) {
-  color: theme.$mm-link-color;
+a {
+    color: theme.$mm-link-color;
 }
 
+//TODO Use system font stack for code https://www.digitalocean.com/community/tutorials/css-system-font-stack
 pre,
 code {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-weight: bold;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-weight: bold;
 }
 
 code {
-  display: inline-flex;
-  padding: 0.15em;
-  background-color: theme.mm-color("light");
-  font-size: 0.75em;
-  color: theme.mm-color("gray");
-  border: 1px solid scale-color(theme.mm-color("gray"), $lightness: 50%);
-  border-radius: 2px;
-  line-height: 1.1;
+    display: inline-flex;
+    padding: 0.15em;
+    background-color: theme.mm-color("light");
+    font-size: 0.75em;
+    color: theme.mm-color("gray");
+    border: 1px solid scale-color(theme.mm-color("gray"), $lightness: 50%);
+    border-radius: 2px;
+    line-height: 1.1;
 }
 
 pre {
-  margin: 0;
-  display: inline-block;
-
-  code {
-    display: block;
-    padding: 0 1rem;
-    white-space: pre-wrap;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    overflow-x: auto;
-  }
+    margin: 0;
+    display: inline-block;
+    code {
+        display: block;
+        padding: 0 1rem;
+        white-space: pre-wrap;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        overflow-x: auto;
+    }
 }
 
 blockquote {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 1.5rem;
-  border-left: 5px solid mm-color("secondary");
-  color: mm-color("gray");
-
-  &,
-  p {
-    font-size: theme.$mm-h4-font-size;
-  }
-
-  + * {
-    margin-top: 3rem;
-  }
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid theme.mm-color("secondary");
+    color: mm-color("gray");
+    &,
+    p {
+        font-size: theme.$mm-h4-font-size;
+    }
+    +* {
+        margin-top: 3rem;
+    }
 }
 
 .mm-lead {
-  font-size: theme.$mm-lead-font-size;
-  letter-spacing: 0.01em;
-  margin-bottom: 1em;
-  line-height: 1.3;
+    font-size: theme.$mm-lead-font-size;
+    letter-spacing: 0.01em;
+    margin-bottom: 1em;
+    line-height: 1.3;
 }
 
 .mm-list-unstyled {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }

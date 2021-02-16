@@ -39,3 +39,5 @@ Linting is provided by [Stylelint](https://stylelint.io/) and rules are extended
 Development setup and basic styles taken from [**HTML / Sass Jumpstart >**](https://github.com/5t3ph/html-sass-jumpstart).
 
 [Buy the developer of the HTML / Sass Jumpstart a coffee here](https://www.buymeacoffee.com/moderncss).
+
+SVG icons from [Simple Icons](https://simpleicons.org/), which has over 1500 free SVG icons for popular brands.

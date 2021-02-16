@@ -1,39 +1,23 @@
 @use "theme";
-
 body {
-  //background-color: mm-color("background");
-  color: theme.$mm-color-body;
-  font-family: theme.$mm-font-family;
+    //background-color: mm-color("background");
+    color: theme.$mm-color-body;
+    font-family: theme.$mm-font-family;
 }
 
 .page {
-  max-width: 960px;
-  margin-left:auto;
-  margin-right: auto;
-  padding: 1rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
 }
 
-.nav {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item {
-  display: inline;
-  margin-right: 1rem;
-}
-
-.nav-item-selected {
-  display: inline;
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
-.nav-item a {
-  text-decoration: none;
+hr {
+    border: none;
+    border-top: 1px solid #c2c5cc;
+    //transform: translateY(-1px);
 }
 
 footer {
-  margin-top: auto;
+    margin-top: auto;
 }
