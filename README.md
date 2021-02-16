@@ -38,4 +38,4 @@ Linting is provided by [Stylelint](https://stylelint.io/) and rules are extended
 
 Development setup and basic styles taken from [**HTML / Sass Jumpstart >**](https://github.com/5t3ph/html-sass-jumpstart).
 
-[![Buy the developer of the HTML / Sass Jumpstart a coffee](https://cdn.buymeacoffee.com/buttons/default-violet.png)](https://www.buymeacoffee.com/moderncss)
+[Buy the developer of the HTML / Sass Jumpstart a coffee here](https://www.buymeacoffee.com/moderncss).
