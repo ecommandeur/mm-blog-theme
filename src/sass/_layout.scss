@@ -1,0 +1,37 @@
+body {
+  //background-color: mm-color("background");
+  color: $mm-color-body;
+  font-family: $mm-font-family;
+}
+
+.page {
+  max-width: 960px;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.nav-item-selected {
+  display: inline;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+footer {
+  margin-top: auto;
+}
