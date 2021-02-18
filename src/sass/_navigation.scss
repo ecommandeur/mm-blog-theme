@@ -1,45 +1,78 @@
-.nav {
+.mm-nav-bar {
+    border-bottom: 1px solid #c2c5cc;
+    height: 60px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.mm-nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    color: #0066a1;
+    height: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mm-nav {
+    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    color: #0066a1;
+    align-items: center;
+    height: 100%;
 }
 
-.nav-container {
+.mm-nav-left {
     display: flex;
-    flex-wrap: wrap;
+    //margin-right: auto;
 }
 
-.nav-right {
+.mm-nav-right {
     display: flex;
     margin-left: auto;
 }
 
-.nav-item {
-    display: inline;
+.mm-nav-item {
+    //display: inline;
     margin-right: 1rem;
+    height: 100%;
 }
 
-.nav-item-icon+.nav-item-icon {
+.mm-nav-item-icon+.mm-nav-item-icon {
     margin-left: 10px;
 }
 
-.nav-item-selected {
-    display: inline;
+.mm-nav-item-selected {
+    //display: inline;
     font-weight: bold;
     margin-right: 1rem;
+    border-bottom: 2px solid;
+    height: 100%;
 }
 
-.nav-item a {
+//for now repeat the color or otherwise it is overriden
+.mm-nav-anchor-shared {
+    display: flex;
     text-decoration: none;
     color: #0066a1;
+    height: 100%;
+    align-items: center;
 }
 
-.nav-item-selected a {
-    color: #0066a1;
+.mm-nav-item a {
+    @extend .mm-nav-anchor-shared
+}
+
+.mm-nav-item-selected a {
+    @extend .mm-nav-anchor-shared
 }
 
 //Should size differ for mobile and desktop?
-.nav-svg-icon {
+.mm-nav-svg-icon {
     width: 24px;
 }
