@@ -1,14 +1,16 @@
-//TODO use color scheme from Ezhil theme https://github.com/vividvilla/ezhil
-//Blog that uses this theme is https://www.wimdeblauwe.com/
-//$mm-color-primary: #171392 !default;
-//$mm-color-secondary: #5c59b2 !default;
+//Primary color is used for ... ink classes?
+//Secondary color is used for ... at least for blockquotes...
+//Background color is main background color for page
 $mm-color-primary: #212529 !default;
 $mm-color-secondary: #6996AD !default;
 $mm-color-background: #f9f9f9;
+//Brand colors? Do we need it...
 $mm-brand-colors: ( "primary": $mm-color-primary, "secondary": $mm-color-secondary, ) !default;
-//$mm-color-body: scale-color($mm-color-primary, $lightness: -30%, $saturation: -50%) !default;
+//Color body is the default color of text
 $mm-color-body: #333;
+//Color-gray, do we need it...
 $mm-color-gray: mix(#767676, $mm-color-body, 70%) !default;
+//And what does this do...
 $mm-colors: map-merge( $mm-brand-colors, ( "text": $mm-color-body, "background": $mm-color-background, "light": #fff, "dark": rgba(black, 0.87), "gray": $mm-color-gray, ));
 @function mm-color($key) {
     @return map-get($mm-colors, $key);
@@ -33,7 +35,7 @@ $mm-button-variants: "primary",
 "gray" !default;
 $mm-link-color: mm-color("primary") !default;
 $mm-border-radius: 8px !default;
-//use system font stack https://www.digitalocean.com/community/tutorials/css-system-font-stack
+//Use system font stack. For more info see https://www.digitalocean.com/community/tutorials/css-system-font-stack
 $mm-font-family: -apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
